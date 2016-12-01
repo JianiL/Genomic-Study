@@ -1,3 +1,11 @@
+'''
+this code is used for normolized the allele count in to the 
+family unit to control the influence of relateness to the case- 
+control analysis; The control used in this analysis were come from
+the public databases. 
+the input file is the variants vcf file with annotation information
+'''
+
 import sys
 import re
 import tempfile
@@ -203,7 +211,8 @@ def count_samples(vcf_file, ped_hash, num_families):
         reweight_all = sum(reweight_result)*2
         n1 = num_families*2 - reweight_all
         an_control_left = no_an_control - no_control_ac 
-        print(line.strip(), '\t{0:4.2f}\t{1:4.2f}\t{2:4d}\t{3:4d}\t{4:4d}\t{5:4d}'.format(reweight_all, n1,  total_ac, an, no_control_ac, an_control_left))
+        print(line.strip(), '\t{0:4.2f}\t{1:4.2f}\t{2:4d}\t{3:4d}\t{4:4d}\t{5:4d}'.format(
+            reweight_all, n1,  total_ac, an, no_control_ac, an_control_left))
 
 ped_file = ped
 vcf_file = "lessCommonIn1000G.vcf"
