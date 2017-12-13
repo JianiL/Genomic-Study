@@ -148,9 +148,9 @@ else:
         #use the prediction algorithms to keep the lgd missenese muations,
         #require the nonsynonymous_SNV occured at the conserved nucliotide and has the cadd>15 with at least one of the other algrithms predicted as deleterious
         elif gene_region == "nonsynonymous_SNV":
-            if float(gerp) > 2.0 and float(phylop) > 0.0:
+            if float(gerp) > 2.0:
                 if float(cadd) > 15.0:
-                    if  float(vest) > 0.5 or sift == "D" or polyphen == "P" or polyphen == "D":
+                    if  sift == "D" or polyphen == "P" or polyphen == "D":
                         print(line.strip())
 
 
