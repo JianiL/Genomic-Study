@@ -1,9 +1,11 @@
 '''
-this code is used for normolized the allele count in to the 
+Damaging variants filtering pipeline used in IA study.
+The control used in this analysis were come from
+the public databases.
+I also included the method we used for normolized the allele count in to the 
 family unit to control the influence of relateness to the case- 
-control analysis; The control used in this analysis were come from
-the public databases. 
-the input file is the variants vcf file with annotation information
+control analysis; 
+The input file is the variants vcf file with annotation information
 '''
 
 import sys
